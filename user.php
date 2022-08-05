@@ -1,3 +1,26 @@
+<?php
+include 'connect.php';
+
+if(isset($_POST['submit'])){
+    $username=$_POST['Username'];
+    $email=$_POST['Email'];
+    $mobile=$_POST['Mobile'];
+    $password=$_POST['Password'];
+    /*you add the insert query then create a variable for results*/
+
+    $sql="insert into  `crudtable` (Username,Email,Mobile,Password)
+    value('$username','$email','$mobile','$password')";
+    $results = mysqli_query($con,$sql);
+    if ($results){
+        echo "data saved successfully";
+    }else{
+        die(mysqli_err($con));
+    }
+
+}
+
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,13 +42,13 @@
             </div>
             <div class="mb-3">
                 <label>Phone Number</label>
-                <input type="integer" class='form-control' placeholder="Enter your number" name="PhoneNumber">
+                <input type="integer" class='form-control' placeholder="Enter your number" name="Mobile">
             </div>
             <div class="mb-3">
                 <label>Password</label>
                 <input type="text" class='form-control' placeholder="Enter your password" name="Password">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" name='submit'>Submit</button>
         </form>
     </div>
   </body>
