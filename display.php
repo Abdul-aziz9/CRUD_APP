@@ -44,8 +44,10 @@
                     <td>'.$name.'</td>
                     <td>'.$email.'</td>
                     <td>'.$mobile.'</td>
-                    <td>'.$mobile.'</td>
                     <td>'.$password.'</td>
+                    <td>
+                    <button class="btn btn-primary"><a href="" class="text-light">Update</a></button><button class="btn btn-danger"><a href="" class="text-light">Delete</a></button>
+                    </td>
                 </tr>';
                 }
             }

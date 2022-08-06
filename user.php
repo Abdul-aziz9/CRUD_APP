@@ -12,7 +12,8 @@ if(isset($_POST['submit'])){
     value('$username','$email','$mobile','$password')";
     $results = mysqli_query($con,$sql);
     if ($results){
-        echo "data saved successfully";
+        // echo "data saved successfully";
+        header('location:display.php'); 
     }else{
         die(mysqli_err($con));
     }
