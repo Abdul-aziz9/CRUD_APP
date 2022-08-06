@@ -28,7 +28,27 @@
         </thead>
         <tbody>
             <?php
+            $sql = "select * from `crudtable`";
+            $result = mysqli_query($con, $sql);
+            if($result){
+                while($row = mysqli_fetch_assoc($result)){
+                    $id=$row['id'];
+                    $name=$row['username'];
+                    $email=$row['email'];
+                    $mobile=$row['mobile'];
+                    $password=$row['password'];
 
+                    echo '
+                    <tr>
+                    <th scope="row">'.$id.'</th>
+                    <td>'.$name.'</td>
+                    <td>'.$email.'</td>
+                    <td>'.$mobile.'</td>
+                    <td>'.$mobile.'</td>
+                    <td>'.$password.'</td>
+                </tr>';
+                }
+            }
             ?>
             
             <!--<tr>

@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
     $password=$_POST['Password'];
     /*you add the insert query then create a variable for results*/
 
-    $sql="insert into  `crudtable` (Username,Email,Mobile,Password)
+    $sql="insert into `crudtable` (Username,Email,Mobile,Password)
     value('$username','$email','$mobile','$password')";
     $results = mysqli_query($con,$sql);
     if ($results){
