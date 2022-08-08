@@ -35,19 +35,19 @@ if(isset($_POST['submit'])){
         <form method='post'>
             <div class="mb-3">
                 <label>Username</label>
-                <input type="text" class='form-control' placeholder="Enter your name" name="Username">
+                <input type="text" class='form-control' placeholder="Enter your name" autocomplete="off" name="Username">
             </div>
             <div class="mb-3">
                 <label>Email</label>
-                <input type="email" class='form-control' placeholder="Enter your email" name="Email">
+                <input type="email" class='form-control' placeholder="Enter your email" autocomplete="off" name="Email">
             </div>
             <div class="mb-3">
                 <label>Phone Number</label>
-                <input type="integer" class='form-control' placeholder="Enter your number" name="Mobile">
+                <input type="integer" class='form-control' placeholder="Enter your number" autocomplete="off" name="Mobile">
             </div>
             <div class="mb-3">
                 <label>Password</label>
-                <input type="text" class='form-control' placeholder="Enter your password" name="Password">
+                <input type="text" class='form-control' placeholder="Enter your password" autocomplete="off" name="Password">
             </div>
             <button type="submit" class="btn btn-primary" name='submit'>Submit</button>
         </form>
