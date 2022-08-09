@@ -1,5 +1,5 @@
 <?php
-include'connect.php';
+require 'connect.php';
 
 if(isset($_GET['deleteid'])){
     $id=$_GET['deleteid'];
